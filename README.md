@@ -1,76 +1,16 @@
-# Sample Markdown
+# OVALE ROOM BOOK FINDER
 
-## Second Heading
+## Background
 
-### Second Heading
-
-- Unordered lists, and:
-
-1. One
-1. Two
-1. Three
-
-- More
-
-> Blockquote
-
-And **bold**, _italics_, and even \*italics and later **bold\***. Even ~~strikethrough~~. [A link](https://markdowntohtml.com) to somewhere.
-
-And code highlighting:
-
-```js
-var foo = "bar";
-
-function baz(s) {
-  return foo + ":" + s;
-}
-```
-
-Or inline code like `var foo = 'bar';`.
-
-Or an image of bears
-
-![bears](http://placebear.com/200/200)
-
-The end ...
-
-This will serve as a first draft
-(maybe it will drastically change later)
-
-FINAL PROJECT
-
-suggestions:
-
-- investigation game for getting into
-- website for looking books in a public library (winner)
-- tic tac toe
-
-Ovale Room fast find
-
-the site will work like this :
-The user can input title or author of thee book he's looking for
-(maybe include a smart search feature)
-the site will either output the information about the book if it is present in the db or return a message about the absence of the book in the Ovale Room
-
-I will need to connect to the OPEN DB of the BNF
-
-2 choices
-
-either retrieve the data in a daily fashion so the i do not have to make X API calls
-
-or simply do 1 api call each time
-
-...
-yeah, 1 API versus dl the entire DB....
-
-So that will be 1 API
+Final project for the CS50 introduction to computer science
 
 Also to do, indicate the location of the book in the library
 
 So first, i'll need the whole CSV db, concatenate it, clean it (if at all possible), reorganize it.
 Then i'll need to use that as a base (SQL)
 
-Principle:
+## Principle:
+
 a simple search bar
 if data is not in the db return a message
 else if more than 1 result
