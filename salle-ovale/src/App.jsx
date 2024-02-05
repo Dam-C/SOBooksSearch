@@ -69,13 +69,13 @@ function App() {
           dispatch={dispatch}
         />
       )}
-      {/* <button
+      <button
         onClick={() => {
           console.log(state);
         }}
       >
         Check
-      </button> */}
+      </button>
       <footer>
         <p className="disclaimer">
           Pour en savoir plus sur la salle Ovale et la BNF
