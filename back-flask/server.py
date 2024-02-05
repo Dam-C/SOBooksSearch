@@ -102,13 +102,8 @@ def resultsNewPage():
             else:
                 return {"noResult": f"{query} n'a pas été trouvé"}
 
-        return {"well":"hello"}
     else:
         return {"noResult":"Sorry something went wrong"}
-
-# with engine.connect() as connection:
-#     uploadDB = text("COPY books(column2, column3, column4, column5, column6) FROM '/bookslight.csv' DELIMITER ',' CSV HEADER")
-#     connection.execute(uploadDB)
 
 if __name__ == "__main__":
     app.run(debug=True)
