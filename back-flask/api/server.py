@@ -28,9 +28,6 @@ app.config['JSON_AS_ASCII'] = False
 # conn = psycopg2.connect(database="books", user="Dam-C", password="bVFRaX3TeQo4", host="ep-summer-snow-82431142.eu-central-1.aws.neon.tech", port="5432")
 # cur = conn.cursor()
 
-
-
-
 @app.route("/start")
 def start ():
     return {"test" : ["one", "two", "three","four"]}
