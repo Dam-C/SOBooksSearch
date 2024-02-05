@@ -1,6 +1,6 @@
 export const indexation = [
   //   default for testing purposes
-  { coteType: "0-0", indexLink: "./src/assets/spots/BASE.svg" },
+  { coteType: "0-0", indexLink: "../src/assets/spots/BASE.svg" },
   // Outer lib - Fonds de reference
   { coteType: "0-01", indexLink: "../../src/assets/spots/011.svg" },
   { coteType: "0-02", indexLink: "../../src/assets/spots/020.svg" },
