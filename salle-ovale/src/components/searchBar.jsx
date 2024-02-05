@@ -7,7 +7,10 @@ const SearchBar = ({ search, dispatch }) => {
   const handleQuerySubmit = async (event) => {
     event.preventDefault();
     axios
-      .post("http://127.0.0.1:5000/search", { userSearch: search })
+      // .post("http://127.0.0.1:5000/search", { userSearch: search })
+      .post("https://so-books-search-back.vercel.app/search", {
+        userSearch: search,
+      })
       .then((response) => {
         const content = response.data;
         if (Object.prototype.hasOwnProperty.call(content, "noResult")) {
