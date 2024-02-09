@@ -14,7 +14,7 @@ const Pagination = ({ search, resPages, currPage, dispatch }) => {
     // console.log(event.target.value);
     const nextPageQuery = event.target.value;
     axios
-      .post("http://127.0.0.1:5000/resultsNewPage", {
+      .post("https://so-books-search-back.vercel.app/resultsNewPage", {
         userSearch: search,
         nextPage: nextPageQuery,
       })

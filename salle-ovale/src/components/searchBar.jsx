@@ -35,9 +35,9 @@ const SearchBar = ({ search, dispatch }) => {
   };
 
   return (
-    <article>
+    <article className="search-wrapper">
       <form action="/" method="post" onSubmit={handleQuerySubmit}>
-        <div className="search-wrapper">
+        <div className="search-area">
           <input
             className="search-field"
             autoComplete="off"
