@@ -15,11 +15,11 @@ const ResultsListItem = ({ title, author, cote, date, loc, dispatch }) => {
         })
       }
     >
-      <div className="book-item-title-and-author">
-        <h4 className="book-item__title">{title}</h4>
-        <p className="book-item__author">{author}</p>
+      <h4 className="book-item__title">{title}</h4>
+      <div className="book-item-infos">
+        <p className="book-item__author light-ital">{author}</p>
+        <p className="book-item__cote bold">{cote}</p>
       </div>
-      <p className="book-item__cote">{cote}</p>
     </article>
   );
 };

@@ -21,7 +21,7 @@ function App() {
       }
     >
       <h1
-        className="main-title"
+        className="title home-btn wrapper"
         onClick={() => {
           dispatch({
             type: "resetSearch",
@@ -43,11 +43,12 @@ function App() {
         />
       ) : (
         pathOpened == false && (
-          <aside className="home-infos">
+          <aside className="home-infos wrapper">
             <p className="tuto">
               Pour trouver l&apos;emplacement d&apos;un livre, rentrez son titre
               dans la barre de recherche.
             </p>
+            <br />
             <p className="information">
               Information : <br />
               Une partie de la catégorie Bande-dessinée eset encore en cours de
@@ -73,15 +74,25 @@ function App() {
         onClick={() => {
           console.log(state);
         }}
-      >
+        >
         Check
       </button> */}
       <footer>
         <p className="disclaimer">
           Pour en savoir plus sur la salle Ovale et la BNF
         </p>
-        <a href="https://catalogue.bnf.fr/index.do">Lien Catalogue</a>
-        <a href="https://www.bnf.fr/fr">Lien BNF</a>
+        <p className="bnf-links">
+          <a
+            className="bnf-link"
+            href="https://catalogue.bnf.fr/index.do"
+            target="blank"
+          >
+            Lien Catalogue
+          </a>
+          <a className="bnf-link" href="https://www.bnf.fr/fr" target="blank">
+            Lien BNF
+          </a>
+        </p>
       </footer>
     </main>
   );

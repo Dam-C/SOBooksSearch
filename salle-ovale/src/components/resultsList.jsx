@@ -13,8 +13,8 @@ const ResultsList = ({
   dispatch,
 }) => {
   return (
-    <section className="results-list">
-      <h3 className="results-list__title">Résultats ({totResults})</h3>
+    <section className="results-list wrapper">
+      <h3 className="results-list__title title">Résultats ({totResults})</h3>
       {pages > 1 && (
         <Pagination
           search={search}
