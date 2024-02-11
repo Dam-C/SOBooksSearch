@@ -18,7 +18,7 @@ const ResultsListItem = ({ title, author, cote, date, loc, dispatch }) => {
       <h4 className="book-item__title">{title}</h4>
       <div className="book-item-infos">
         <p className="book-item__author light-ital">{author}</p>
-        <p className="book-item__cote bold">{cote}</p>
+        {/* <p className="book-item__cote bold">{cote}</p> */}
       </div>
     </article>
   );

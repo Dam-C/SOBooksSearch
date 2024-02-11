@@ -55,7 +55,7 @@ const Pagination = ({ search, resPages, currPage, dispatch }) => {
   return (
     <article>
       {resPages <= 10 ? (
-        <ul className="pagination">
+        <ul className="pagination title">
           {paginationNumbers.map((pageNum) => {
             return (
               <li key={pageNum} className="pagination-index">
@@ -63,8 +63,8 @@ const Pagination = ({ search, resPages, currPage, dispatch }) => {
                   value={pageNum}
                   className={
                     pageNum == currPage
-                      ? "pagination-btn pag-index__current-page"
-                      : "pagination-btn"
+                      ? "pagination-btn title pag-index__current-page"
+                      : "pagination-btn title"
                   }
                   onClick={handleNewPage}
                 >
@@ -84,8 +84,8 @@ const Pagination = ({ search, resPages, currPage, dispatch }) => {
                     value={pageNum}
                     className={
                       pageNum == currPage
-                        ? "pagination-btn pag-index__current-page"
-                        : "pagination-btn"
+                        ? "pagination-btn title pag-index__current-page"
+                        : "pagination-btn title"
                     }
                     onClick={handleNewPage}
                   >
@@ -100,8 +100,8 @@ const Pagination = ({ search, resPages, currPage, dispatch }) => {
                     value={pageNum}
                     className={
                       pageNum == currPage
-                        ? "pagination-btn pag-index__current-page"
-                        : "pagination-btn"
+                        ? "pagination-btn title pag-index__current-page"
+                        : "pagination-btn title"
                     }
                   >
                     {pageNum}

@@ -3,7 +3,7 @@ import axios from "axios";
 // import React from "react";
 import PropTypes from "prop-types";
 
-const SearchBar = ({ search, dispatch }) => {
+const SearchBar = ({ search, dispatch, isSearched }) => {
   const handleQuerySubmit = async (event) => {
     event.preventDefault();
     axios
@@ -35,7 +35,19 @@ const SearchBar = ({ search, dispatch }) => {
   };
 
   return (
-    <article className="wrapper">
+    <article className="searchBar wrapper">
+      {isSearched == null && (
+        <aside className="home-infos">
+          <p className="light-ital">
+            Trouvez l&apos;emplacement d&apos;un livre dans la salle Ovale.
+          </p>
+          {/* <p className="information">
+              Information : <br />
+              Une partie de la catégorie Bande-dessinée eset encore en cours de
+              catégorisation.
+            </p> */}
+        </aside>
+      )}
       <form action="/" method="post" onSubmit={handleQuerySubmit}>
         <div className="search-area">
           <input
@@ -44,7 +56,7 @@ const SearchBar = ({ search, dispatch }) => {
             autoFocus
             id="userSearch"
             name="userSearch"
-            placeholder="Rechercher un livre"
+            placeholder="Titre du livre"
             type="text"
             onChange={(e) =>
               dispatch({
@@ -56,7 +68,7 @@ const SearchBar = ({ search, dispatch }) => {
             required
           />
           <button className="search-btn" type="submit">
-            <i className="fa-solid fa-book"></i>
+            <i className="mlicon fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
       </form>
@@ -69,4 +81,5 @@ export default SearchBar;
 SearchBar.propTypes = {
   search: PropTypes.string,
   dispatch: PropTypes.func,
+  isSearched: PropTypes.any,
 };

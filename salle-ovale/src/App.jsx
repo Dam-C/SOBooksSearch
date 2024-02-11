@@ -30,7 +30,12 @@ function App() {
       >
         Salle Ovale
       </h1>
-      <comp.SearchBar search={currSearch} dispatch={dispatch} />
+
+      <comp.SearchBar
+        search={currSearch}
+        dispatch={dispatch}
+        isSearched={currTotResults}
+      />
 
       {currPage != null && pathOpened == false ? (
         <comp.ResultsList
@@ -42,20 +47,15 @@ function App() {
           dispatch={dispatch}
         />
       ) : (
-        pathOpened == false && (
-          <aside className="home-infos wrapper">
-            <p className="tuto">
-              Pour trouver l&apos;emplacement d&apos;un livre, rentrez son titre
-              dans la barre de recherche.
-            </p>
-            <br />
-            <p className="information">
-              Information : <br />
-              Une partie de la catégorie Bande-dessinée eset encore en cours de
-              catégorisation.
-            </p>
-          </aside>
-        )
+        pathOpened == false && null
+        // <aside className="home-infos wrapper">
+        //   <p className="tuto">Trouvez l&apos;emplacement d&apos;un livre.</p>
+        //   {/* <p className="information">
+        //     Information : <br />
+        //     Une partie de la catégorie Bande-dessinée eset encore en cours de
+        //     catégorisation.
+        //   </p> */}
+        // </aside>
       )}
 
       {currTotResults == 0 && <comp.NoResult />}
