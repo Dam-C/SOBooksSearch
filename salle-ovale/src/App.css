@@ -204,11 +204,6 @@ body {
   box-shadow: 0 2px 10px#777777;
 }
 
-.disclaimer {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
 .wrapper,
 .bookLoc-container {
   background: #fff;
@@ -450,6 +445,11 @@ footer {
   width: 100vw;
 }
 
+.disclaimer {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
 .bnf-links {
   display: flex;
   justify-content: center;
@@ -479,6 +479,10 @@ footer {
 
   .home-btn {
     font-size: 3em;
+  }
+
+  .searchBar {
+    width: 90%;
   }
 
   .results-list__title {
