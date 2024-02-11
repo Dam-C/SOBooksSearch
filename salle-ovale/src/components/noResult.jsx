@@ -24,7 +24,7 @@ const NoResult = () => {
   }
 
   return (
-    <article className="no-result">
+    <article className="no-result wrapper">
       <h3 className="no-result__title">
         {lennys[rngLenny(lennysLen)]} - {lennys[rngLenny(lennysLen)]}
       </h3>
