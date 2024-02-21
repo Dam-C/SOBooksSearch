@@ -185,10 +185,12 @@ body {
   box-sizing: border-box;
   height: 100%;
 }
+
 .init {
   margin: 0;
   height: 100vh;
 }
+
 .searched {
   height: auto;
   margin-top: 130px;
@@ -202,6 +204,17 @@ body {
   font-size: 3em;
   font-weight: bold;
   box-shadow: 0 2px 10px#777777;
+}
+
+.fren {
+  position: absolute;
+  top: 45px;
+  right: 40px;
+  font-size: 0.5em;
+  font-weight: 100;
+}
+.fren:hover {
+  color: var(--main-gold);
 }
 
 .wrapper,
@@ -280,11 +293,11 @@ body {
   font-weight: 600;
   margin-bottom: 25px;
 }
-.no-result__text {
+/* .no-result__text {
 }
 
 .results-list {
-}
+} */
 
 .results-list__title {
   font-size: 1.4em;
@@ -478,7 +491,13 @@ footer {
   }
 
   .home-btn {
-    font-size: 3em;
+    font-size: 2.4em;
+  }
+
+  .fren {
+    top: 35px;
+    right: 20px;
+    font-size: 0.4em;
   }
 
   .searchBar {

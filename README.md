@@ -1,32 +1,40 @@
 # OVALE ROOM BOOK FINDER
 
-## Background
+## RoadMap
 
-Final project for the CS50 introduction to computer science
+**Main project**
 
-Also to do, indicate the location of the book in the library
+- Classifying the books categories inside the library ✅
+- Structuring the App ✅
+- Retrieving the data from the BNF database ✅
+- Cleaning the data ✅
+- Matching the data to the book categories ✅
+- Deploygin the database ✅
+- Deploying the back-end ✅ 05/02/2024
+- Deploying the Front-end ✅ 11/02/2024
+- Polishing database ☑️
 
-So first, i'll need the whole CSV db, concatenate it, clean it (if at all possible), reorganize it.
-Then i'll need to use that as a base (SQL)
+**Afterwards**
+
+- Setting metrics features ☑️
+- Implementing update fonctionnalities ☑️
+- Implementing routing ☑️
+- features to allow changes in the books locations ☑️
 
 ## Principle:
 
-a simple search bar
-if data is not in the db return a message
-else if more than 1 result
-return the potential results in a list
-else return the result in page and location in the library
-
 ## Technologies
 
+**FrontEnd**
 React for the front
 HTML
 CSS
 Javascript
-jinja for the back
-Flask
+**BackEnd**
 Python
-SQL
+Flask
+**Database**
+PostgreSQL
 
 Marie Carlin
 Louise-Anne Charle

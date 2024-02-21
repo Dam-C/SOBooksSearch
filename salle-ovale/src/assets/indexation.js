@@ -63,7 +63,7 @@ export const indexation = [
   { coteType: "5-01", indexLink: "/spots/MUSIQUE.svg" },
   { coteType: "5-02", indexLink: "/spots/CINEMA.svg" },
   { coteType: "5-03", indexLink: "/spots/THEATRE.svg" },
-  { coteType: "5-04", indexLink: "/spots/SPECTALE.svg" },
+  { coteType: "5-04", indexLink: "/spots/SPECTACLE.svg" },
   { coteType: "5-05", indexLink: "/spots/STREET.svg" },
   { coteType: "5-06", indexLink: "/spots/ARCHIJ.svg" },
   { coteType: "5-07", indexLink: "/spots/ARCHI.svg" },

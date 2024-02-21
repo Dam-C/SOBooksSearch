@@ -20,16 +20,21 @@ function App() {
         currTotResults == null ? "mainWrapper init" : "mainWrapper searched"
       }
     >
-      <h1
-        className="title home-btn wrapper"
-        onClick={() => {
-          dispatch({
-            type: "resetSearch",
-          });
-        }}
-      >
-        Salle Ovale
-      </h1>
+      <div className="home-btn wrapper">
+        <h1
+          className="title"
+          onClick={() => {
+            dispatch({
+              type: "resetSearch",
+            });
+          }}
+        >
+          Salle Ovale
+        </h1>
+        {/* <div className="fren">
+          <span>FR</span> | <span>EN</span>
+        </div> */}
+      </div>
 
       <comp.SearchBar
         search={currSearch}
