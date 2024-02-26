@@ -170,7 +170,7 @@ font-family: 'Roboto Condensed', sans-serif;
 }
 
 body {
-  background: no-repeat url("../public/body-bg.jpg") fixed;
+  background: no-repeat url("../public/body-bg.png") fixed;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -214,7 +214,7 @@ body {
   font-weight: 100;
 }
 .fren:hover {
-  color: var(--main-gold);
+  background-color: main;
 }
 
 .wrapper,
@@ -456,6 +456,7 @@ footer {
   padding: 30px 40px;
   bottom: 0px;
   width: 100vw;
+  box-shadow: 0 2px 10px#777777;
 }
 
 .disclaimer {
@@ -483,7 +484,11 @@ footer {
   }
 
   .mainWrapper {
-    padding: 100px 0;
+    padding: 80px 0;
+  }
+
+  .searched {
+    margin-top: 80px;
   }
 
   .wrapper {
@@ -496,6 +501,7 @@ footer {
 
   .fren {
     top: 35px;
+
     right: 20px;
     font-size: 0.4em;
   }
@@ -510,7 +516,15 @@ footer {
     margin-bottom: 15px;
   }
 
+  .pagination {
+    padding: 0.6em 0;
+  }
+
   .book-item {
     transition: all 150ms ease-out;
+  }
+
+  footer {
+    padding: 20px 35px;
   }
 }
