@@ -4,6 +4,8 @@ import { indexation } from "../assets/indexation";
 const BookLocation = ({ title, author, cote, date, spot, dispatch }) => {
   const imgSRC = indexation.find((loc) => loc.coteType == spot).indexLink;
 
+  console.log(cote, spot)
+
   return (
     <article className="bookLoc-container">
       <div className="backToRes-Wrapper">
@@ -15,7 +17,7 @@ const BookLocation = ({ title, author, cote, date, spot, dispatch }) => {
             })
           }
         >
-          <span className="backArrow"></span>Retour aux résultats
+          <i className="fa-solid fa-arrow-left"></i> Retour aux résultats
         </button>
       </div>
       <div className="bookLoc-title-wrapper">

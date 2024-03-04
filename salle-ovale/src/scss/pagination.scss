@@ -1,0 +1,38 @@
+.pagination {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    padding: 1em 0;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pagination-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .pagination-btn:hover {
+    color: $main-gold;
+  }
+  .pagination-index {
+    font-weight: 100;
+    font-size: 1em;
+  }
+  
+  .pag-index__current-page {
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+@media only screen and (max-device-width: 440px) {
+    .pagination {
+        padding: 0.6em 0;
+        }
+}

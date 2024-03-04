@@ -1,6 +1,6 @@
 export const indexation = [
   //   default for testing purposes
-  { coteType: "0-0", indexLink: "/spots/MUSIQUE.svg" },
+  { coteType: "0-0", indexLink: "/spots/BASE.svg" },
   // Outer lib - Fonds de reference
   { coteType: "0-01", indexLink: "/spots/011.svg" },
   { coteType: "0-02", indexLink: "/spots/020.svg" },
@@ -86,6 +86,6 @@ export const indexation = [
   { coteType: "6-14", indexLink: "/spots/BDANTHO.svg" },
   // bacs
   { coteType: "7-01", indexLink: "/spots/BDOUSJ.svg" },
-  { coteType: "7-02", indexLink: "/spots/BDSEUSJJ.svg" },
+  { coteType: "7-02", indexLink: "/spots/BDSEUJJ.svg" },
   { coteType: "7-03", indexLink: "/spots/LIVREALBJ.svg" },
 ];
