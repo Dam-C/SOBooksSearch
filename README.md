@@ -4,33 +4,62 @@
 
 ## **Description:**
 
-Ovale Room Book Finder (abreviated ORBF in this readme) is a single-page app that allows you to know the availability and location of a book inside the Ovale Room.
+Ovale Room Book Finder (abreviated ORBF in this readme) is a single-page app that enables visitors to know the availability and location of a book inside the Ovale Room.
 
-You can as a user enter the Title of a book and the ORBF will display a list of possible matchs. When checking the desired result, a map will be shown with an area highlighted, that is the book's dedicated shelves where you will find the book (provided that no one took it or that the book has not been taken out by the librarians for specific purposes)
+By entering the title of a book, ORBF will display a list of possible matchs. When checking the desired result, a map will be shown with an area highlighted, that is the book's dedicated bookshelves (provided that no other visitor took it or that the book has not been taken out by the librarians for specific purposes)
 
 ## **Table of Content**
 
-1. Project background
+
+1. How to use
+    - Requirements
+    - Installation
+
+2. Project background
     - Introduction
     - Challenge with current system
     - Why ?
     - Reception
 
-2. The project
+3. The project
     - Technical choices
         - Front end
         - Back end
         - Database
-3. Files
+4. Files
     - Front
     - Back
     - other
-4. Futur of the project
+5. Futur of the project
     - Roadmap
-5. How to use
-## **1. Project background:**
+
+## **1. How to use:**
+
+### Requirements
+
+Node 
+> https://nodejs.org/en
+
+Sass 
+> https://sass-lang.com/install/
+
+Yarn (or another packet manager)
+> https://yarnpkg.com/
+
+Python 
+> https://www.python.org/
+
+
+
+### Installation
+
+Download the project and extract it.
+Use your IDE to go into the 
+
+## **2. Project background:**
 
 ### Introduction
+
 I work at a public library named Salle Ovale, or Oval Room, that have a very (very) large catalog.
 
 Nothing unusual for the National Library of France (henceforth shortened to BNF). We have an existing online search tool, very powerfull, very thorough, but it is mainly directed at scholars, researchers and students (from master to PhD) who would need books or reference in the BNF collections.
@@ -52,7 +81,7 @@ To sum it up I wanted to contribute, ever so slightly, and be of help for my col
 Once deployed, the web-app is mainly used by BNF agents. My main goal was firstly to have it working to gather feedbacks so I could identify potential problems.
 As of today (2024/03/04) the reception has been positive and the app is used mainly by colleagues from the BNF. I can also say there is no real competition since the ORBF is very straightforward and needs few datas to work. Therefore it does not compete with the BNF catalog but instead complements it. The BNF catalog encompass more than 14 millions public references, where the ORBF uses about 33000 of them, so 0.24% of the catalog.
 
-## **2. The project**
+## **3. The project**
 ### Technical choices
 
 **Front end**
@@ -85,7 +114,7 @@ Once that was done i
 
 
 
-## **3. Files**
+## **4. Files**
 
 ### Front
 
@@ -198,7 +227,7 @@ Once that was done i
 
     Vercel requires a configuration file to properly start. This files indicate to vercel which path to follow and wich files to use.
 
-## **4. Futur of the project**
+## **5. Futur of the project**
 
 This project, as of now, is in its first part
 ### Roadmap
