@@ -47,7 +47,7 @@ def start ():
 
 @app.route("/books")
 def lib():
-    return rows
+    return {"rows":"rows"}
 
 @app.route("/search", methods =["GET","POST"])
 def search():

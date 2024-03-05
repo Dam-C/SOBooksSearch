@@ -29,7 +29,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/joellechong/Documents/Dossier_DC/DEV/cs50_fp/back-flask/.venv"
+set -gx VIRTUAL_ENV "/Users/DamienC/Documents/DEV/cs50_fp/back-flask/.venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
