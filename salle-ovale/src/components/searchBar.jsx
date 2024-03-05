@@ -1,6 +1,4 @@
-// import { useState } from "react";
 import axios from "axios";
-// import React from "react";
 import PropTypes from "prop-types";
 
 const SearchBar = ({ search, dispatch, isSearched }) => {
@@ -41,11 +39,6 @@ const SearchBar = ({ search, dispatch, isSearched }) => {
           <p className="light-ital">
             Trouvez l&apos;emplacement d&apos;un livre dans la salle Ovale.
           </p>
-          {/* <p className="information">
-              Information : <br />
-              Une partie de la catégorie Bande-dessinée eset encore en cours de
-              catégorisation.
-            </p> */}
         </aside>
       )}
       <form action="/" method="post" onSubmit={handleQuerySubmit}>

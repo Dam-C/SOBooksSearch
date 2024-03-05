@@ -82,7 +82,7 @@ function App() {
         >
         Check
       </button> */}
-      <footer>
+      <footer className="wrapper">
         <p className="disclaimer">
           Pour en savoir plus sur la salle Ovale et la BNF
         </p>

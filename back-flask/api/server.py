@@ -5,7 +5,6 @@ from flask_cors import CORS
 from sqlalchemy import URL, create_engine, text
 from sqlalchemy.orm import sessionmaker
 
-
 # cmd list for python environment
 # . .venv/bin/activate
 # pip install -U Flask
@@ -14,19 +13,16 @@ from sqlalchemy.orm import sessionmaker
 # pip install -U psycopg2-binary
 # python3 server.py
 
-# NEON db access
-# postgresql://Dam-C:bVFRaX3TeQo4@ep-summer-snow-82431142.eu-central-1.aws.neon.tech/books?sslmode=require
+connection_string = URL.create('postgresql',username='sobooksconnect',password='sFcjhL63lOEA',host='ep-summer-snow-82431142.eu-central-1.aws.neon.tech',database='books',connect_args={'sslmode':'require'})
+
+engine = create_engine(connection_string)
 
 # Creates the engine that allows to connect to the Neon DB
-engine = create_engine("postgresql://Dam-C:bVFRaX3TeQo4@ep-summer-snow-82431142.eu-central-1.aws.neon.tech/books?sslmode=require")
+# engine = create_engine("postgresql://Dam-C:bVFRaX3TeQo4@ep-summer-snow-82431142.eu-central-1.aws.neon.tech/books?sslmode=require")
 
 app = Flask(__name__)
 CORS(app)
 app.config['JSON_AS_ASCII'] = False
-
-# # setup connection
-# conn = psycopg2.connect(database="books", user="Dam-C", password="bVFRaX3TeQo4", host="ep-summer-snow-82431142.eu-central-1.aws.neon.tech", port="5432")
-# cur = conn.cursor()
 
 @app.route("/")
 def default():
@@ -72,7 +68,6 @@ def search():
                 return {"noResult": f"{query} n'a pas été trouvé"}
     else:
         return {"result": f"so sorry"}
-
 
 @app.route("/resultsNewPage", methods=["GET", "POST"])
 def resultsNewPage():

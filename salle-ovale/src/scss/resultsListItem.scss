@@ -7,28 +7,28 @@
     border-left: 4px solid black;
 }
   
-  .book-item:hover {
+.book-item:hover {
     transition: all 50ms ease-out;
     color: $main-gold;
-  }
-  .book-item-infos {
+}
+.book-item-infos {
     display: flex;
     flex: 1;
     justify-content: space-between;
     gap: 10px;
-  }
-  
-  .book-item__title {
+}
+
+.book-item__title {
     text-align: left;
     font-size: 1.3em;
-  }
-  
-  .book-item__author {
+}
+
+.book-item__author {
     text-align: left;
     font-size: 1.1em;
     color: $main-gold;
-  }
-  .book-item__cote {
+}
+.book-item__cote {
     font-size: 1.2em;
     color: $main-violet;
-  }
+}
