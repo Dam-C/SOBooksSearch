@@ -13,24 +13,7 @@ from sqlalchemy.orm import sessionmaker
 # pip install -U psycopg2-binary
 # python3 server.py
 
-# Role to only query
-# pgid = "sobooksconnect"
-# pgpass = "sFcjhL63lOEA"
-
-
-# connection_string = URL.create(
-#   'postgresql',
-#   username='sobooksconnect',
-#   password='sFcjhL63lOEA',
-#   host='ep-summer-snow-82431142.eu-central-1.aws.neon.tech'
-#   database='books',
-#   connect_args={'sslmode':'require'}
-# )
-
-# engine = create_engine(connection_string)
-
 # Creates the engine that allows to connect to the Neon DB
-# engine = create_engine("postgresql://Dam-C:bVFRaX3TeQo4@ep-summer-snow-82431142.eu-central-1.aws.neon.tech/books?sslmode=require")
 engine = create_engine("postgresql://sobooksconnect:sFcjhL63lOEA@ep-summer-snow-82431142.eu-central-1.aws.neon.tech/books?sslmode=require")
 
 app = Flask(__name__)
