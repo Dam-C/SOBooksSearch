@@ -4,34 +4,33 @@ import { indexation } from "../assets/indexation";
 const BookLocation = ({ title, author, cote, date, spot, dispatch }) => {
   const imgSRC = indexation.find((loc) => loc.coteType == spot).indexLink;
 
-  console.log(cote, spot)
-
   return (
-    <article className="bookLoc-container">
-      <div className="backToRes-Wrapper">
+    <article className="bookloc-wrapper">
+      <div className="bookloc-head-wrapper">
         <button
-          className="bookLoc-btn"
+          className="bookloc-head__btn-backtores"
           onClick={() =>
             dispatch({
               type: "returnToRes",
             })
           }
         >
-          <i className="fa-solid fa-arrow-left"></i> Retour aux résultats
+          <i className="fa-solid fa-arrow-left bookloc-head__arrow"></i><span className="bookloc-head__text-res">
+            Résultats</span>
         </button>
+        <p className="bookloc-head__title title">Emplacement</p>
       </div>
-      <div className="bookLoc-title-wrapper">
-        <h4 className="bookLoc-title">{title}</h4>
-        <div className="bookLoc__infos">
-          <p className="bookLoc-author light-ital">{author}</p>
-          <p className="bookLoc-date light-ital">Publication : {date}</p>
-        </div>
-        <p className="bookLoc-cote bold">{cote}</p>
+        <img className="bookloc-spot__ovale-map" src={imgSRC} />
+        <p>^</p>
+        <p className="bookloc-spot__entry title">Entrée</p>
+      <div className="bookloc-infos-wrapper">
+        <p className="bookloc-infos__cote bold">{cote}</p>
+        <h4 className="bookloc-infos__title">{title}</h4>
+        {/* <div className="bookloc-infos__misc">
+          <p className="bookloc-infos__misc-author light-ital">{author}</p>
+          <p className="bookloc-infos__misc-date light-ital">Publication : {date}</p>
+        </div> */}
       </div>
-      <p className="spot-title">Emplacement du livre</p>
-      <img className="book-spot" src={imgSRC} />
-      <p>^</p>
-      <p className="bookLoc-cote title">Entrée</p>
     </article>
   );
 };

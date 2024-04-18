@@ -54,7 +54,7 @@ const Pagination = ({ search, resPages, currPage, dispatch }) => {
   }
 
   return (
-    <article>
+    <article className="pagination-wrapper">
       {resPages <= 10 ? (
         <ul className="pagination title">
           {paginationNumbers.map((pageNum) => {

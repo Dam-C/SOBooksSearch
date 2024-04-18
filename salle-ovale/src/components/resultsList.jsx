@@ -13,15 +13,15 @@ const ResultsList = ({
   dispatch,
 }) => {
   return (
-    <section className="results-list wrapper">
-      <h3 className="results-list__title title">Résultats ({totResults})</h3>
+    <section className="results-list">
+      <h3 className="results-list__head title">Résultats ({totResults})</h3>
       {pages > 1 && (
         <Pagination
           search={search}
           dispatch={dispatch}
           resPages={pages}
           currPage={currentPage}
-        />
+          />
       )}
       <ul className="results-list__list">
         {results.map((book, i) => {
@@ -39,14 +39,6 @@ const ResultsList = ({
           );
         })}
       </ul>
-      {pages > 1 && (
-        <Pagination
-          search={search}
-          dispatch={dispatch}
-          resPages={pages}
-          currPage={currentPage}
-        />
-      )}
     </section>
   );
 };
