@@ -135,8 +135,14 @@ table {
 }
 
 .searchBar {
-  margin-bottom: -1px;
-  width: 80%;
+  position: sticky;
+  top: calc(50% - 60px);
+  width: auto;
+}
+.searchBarOn {
+  position: sticky;
+  top: 78px;
+  border-top: 2px solid #777777;
 }
 
 .search-area {
@@ -147,6 +153,9 @@ table {
   border-radius: 0px;
   height: 55px;
   box-sizing: border-box;
+}
+.search-area__searched {
+  height: 40px;
 }
 
 .search-field::placeholder {
@@ -167,7 +176,6 @@ table {
   color: #2b2826;
   box-sizing: border-box;
 }
-
 .search-field:focus {
   background: none;
   border: none;
@@ -185,13 +193,27 @@ table {
 }
 
 @media only screen and (max-device-width: 440px) {
-  .searchBar {
-    width: 90%;
+  .searchBarOn {
+    top: 68px;
+  }
+  .search-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #777777;
+    border-radius: 0px;
+    height: 55px;
+    box-sizing: border-box;
+  }
+  .search-area__searched {
+    height: 40px;
+  }
+  .search-field::placeholder {
+    font-size: 0.8em;
+    color: #777777;
   }
 }
 .pagination {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
   width: auto;
   display: flex;
   justify-content: center;
@@ -226,19 +248,27 @@ table {
     padding: 0.1em;
   }
 }
+.results-head-wrapper {
+  position: sticky;
+  top: 150px;
+  padding-top: 10px;
+  background-color: #ffffff;
+}
 .results-list {
   display: flex;
   overflow: hidden;
   flex-direction: column;
   flex-grow: 1;
   background: #fff;
-  padding: 15px 20px;
+  padding: 15px 20px 100px 20px;
   border-radius: 0px;
   box-sizing: border-box;
+  min-height: calc(100vh - 230px);
 }
 .results-list__head {
   font-size: 1.4em;
-  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 10px;
 }
 .results-list__list {
   display: flex;
@@ -251,13 +281,20 @@ table {
 }
 
 @media only screen and (max-device-width: 440px) {
-  .results-list__title {
+  .results-head-wrapper {
+    top: 140px;
+    background-color: #ffffff;
+  }
+  .results-list {
+    padding: 15px 20px;
+    min-height: calc(100vh - 230px);
+  }
+  .results-list__head {
     font-size: 1.4em;
-    font-weight: 600;
-    margin-bottom: 15px;
+    text-align: center;
   }
   .results-list__list {
-    margin-bottom: -15px;
+    margin-bottom: 35px;
   }
 }
 .book-item {
@@ -281,6 +318,10 @@ table {
 .book-item__title {
   text-align: left;
   font-size: 1.2em;
+  max-height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .book-item__author {
   text-align: left;
@@ -294,8 +335,6 @@ table {
 
 @media only screen and (max-device-width: 440px) {
   .book-item {
-    display: flex;
-    flex-direction: column;
     padding: 0 10px;
     gap: 10px;
     transition: all 150ms ease-out;
@@ -327,8 +366,9 @@ table {
 }
 .bookloc-wrapper {
   position: absolute;
-  margin-top: 78px;
-  height: calc(100vh - 147px);
+  top: 78px;
+  height: calc(100vh - 78px);
+  width: 100%;
   max-width: 700px;
   display: flex;
   flex-direction: column;
@@ -354,8 +394,8 @@ table {
 }
 .bookloc-head__btn-backtores {
   position: absolute;
+  left: 20px;
   top: 15px;
-  left: 30px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -393,7 +433,7 @@ table {
 
 @media only screen and (max-device-width: 440px) {
   .bookloc-wrapper {
-    margin-top: 68px;
+    top: 68px;
     height: calc(100vh - 68px);
     overflow: scroll;
   }
@@ -406,14 +446,13 @@ table {
 font-family: 'DM Serif Display', serif;
 font-family: 'Roboto Condensed', sans-serif;  
 */
+body {
+  background: no-repeat url("../public/body-bg.png") fixed;
+  background-size: cover;
+  background-position: center;
+}
+
 #root {
-  margin-top: auto;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: auto;
-  text-align: center;
   font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -430,20 +469,10 @@ font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
 }
 
-body {
-  background: no-repeat url("../public/body-bg.png") fixed;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-}
-
 .mainWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   box-sizing: border-box;
-  height: 100vh;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .init {
@@ -451,9 +480,12 @@ body {
 }
 
 .home-btn {
+  position: sticky;
+  top: 0px;
   width: 100vw;
   font-size: 3em;
   font-weight: bold;
+  text-align: center;
   box-shadow: 0 2px 10px #777777;
 }
 
@@ -477,6 +509,7 @@ body {
 }
 
 .home-infos {
+  text-align: center;
   margin-bottom: 20px;
   color: #777777;
 }
@@ -495,7 +528,10 @@ body {
   margin-bottom: 25px;
 }
 
-footer {
+.footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
   box-sizing: border-box;
   background-color: #fff;
   width: 100vw;
@@ -505,6 +541,7 @@ footer {
 .disclaimer {
   font-size: 1em;
   margin-bottom: 7px;
+  text-align: center;
 }
 
 .bnf-links {

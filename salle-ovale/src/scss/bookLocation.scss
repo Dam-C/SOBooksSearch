@@ -1,8 +1,9 @@
 .bookloc{
   &-wrapper {
     position: absolute;
-    margin-top: 78px;
-    height: calc(100vh - (78px + 69px));
+    top: 78px;
+    height: calc(100vh - (78px));
+    width: 100%;
     max-width: 700px;
     display: flex;
     flex-direction: column;
@@ -21,6 +22,7 @@
       justify-content: center;
       border-bottom: 2px solid $main-grey;
     }
+    // Arrow returning to the results
     &__arrow{
       margin-right: 5px;
     }
@@ -32,8 +34,8 @@
     &__btn{
       &-backtores{
         position:absolute;
-        top:15px;
-        left: 30px;
+        left: 20px;
+        top: 15px;
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -80,7 +82,7 @@
 @media only screen and (max-device-width: 440px) {
   .bookloc{
     &-wrapper{
-      margin-top: 68px;
+    top:68px;
       height: calc(100vh - 68px);
       overflow: scroll;
     }

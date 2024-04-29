@@ -1,28 +1,13 @@
 // import React from "react";
 import PropTypes from "prop-types";
 import { ResultListItem } from "./compIndex";
-// import { useContext } from "react";
-import Pagination from "./pagination";
 
 const ResultsList = ({
-  search,
   results,
-  totResults,
-  pages,
-  currentPage,
-  dispatch,
+  dispatch
 }) => {
   return (
     <section className="results-list">
-      <h3 className="results-list__head title">Résultats ({totResults})</h3>
-      {pages > 1 && (
-        <Pagination
-          search={search}
-          dispatch={dispatch}
-          resPages={pages}
-          currPage={currentPage}
-          />
-      )}
       <ul className="results-list__list">
         {results.map((book, i) => {
           return (
@@ -45,10 +30,6 @@ const ResultsList = ({
 export default ResultsList;
 
 ResultsList.propTypes = {
-  search: PropTypes.string,
   results: PropTypes.array,
-  totResults: PropTypes.number,
-  pages: PropTypes.number,
-  currentPage: PropTypes.number,
-  dispatch: PropTypes.func,
+  dispatch: PropTypes.func
 };

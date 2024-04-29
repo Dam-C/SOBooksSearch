@@ -53,6 +53,10 @@ const Pagination = ({ search, resPages, currPage, dispatch }) => {
     }
   }
 
+  console.log(search);
+  console.log(resPages);
+  console.log(currPage);
+
   return (
     <article className="pagination-wrapper">
       {resPages <= 10 ? (

@@ -1,9 +1,14 @@
-
 .searchBar {
-    margin-bottom: -1px;
-    width: 80%;
+  position: sticky;
+  top:calc(50% - 60px);
+  width:auto;
+  &On {
+    position: sticky;
+    top: 78px;
+    border-top: 2px solid $main-grey;
+    // border-bottom: 2px solid $main-grey;
   }
-  
+}
 .search-area {
   display: flex;
   align-items: center;
@@ -12,8 +17,11 @@
   border-radius: 0px;
   height: 55px;
   box-sizing: border-box;
+  &__searched {
+    height: 40px;
+  }
 }
-.search-field::placeholder {
+  .search-field::placeholder {
   font-size: 0.8em;
   color: $main-grey;
 }
@@ -30,12 +38,11 @@
   font-size: 1.6em;
   color: $main-black;
   box-sizing: border-box;
-}
-
-.search-field:focus {
-  background: none;
-  border: none;
-  outline: none;
+  &:focus{
+    background: none;
+    border: none;
+    outline: none;
+  }
 }
 
 .search-btn {
@@ -47,9 +54,26 @@
   margin-right: 10px;
   padding: 0 12px;
 }
-  
+
 @media only screen and (max-device-width: 440px) {
-  .searchBar {
-    width: 90%;
+  .searchBarOn {
+    top:68px;
+  }
+
+  .search-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid $main-grey;
+    border-radius: 0px;
+    height: 55px;
+    box-sizing: border-box;
+    &__searched {
+      height: 40px;
+    }
+  }
+  .search-field::placeholder {
+    font-size: 0.8em;
+    color: $main-grey;
   }
 }

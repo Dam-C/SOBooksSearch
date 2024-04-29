@@ -33,7 +33,7 @@ const SearchBar = ({ search, dispatch, isSearched }) => {
   };
 
   return (
-    <article className="searchBar wrapper">
+    <article className={isSearched == null ? "searchBar wrapper" : "searchBar searchBarOn wrapper"}>
       {isSearched == null && (
         <aside className="home-infos">
           <p className="light-ital">
@@ -42,7 +42,7 @@ const SearchBar = ({ search, dispatch, isSearched }) => {
         </aside>
       )}
       <form action="/" method="post" onSubmit={handleQuerySubmit}>
-        <div className="search-area">
+        <div className={isSearched == null ? "search-area" : "search-area search-area__searched"}>
           <input
             className="search-field"
             autoComplete="off"

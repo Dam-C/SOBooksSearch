@@ -18,6 +18,11 @@
     &__title {
         text-align: left;
         font-size: 1.2em;
+        
+        max-height:40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     &__author {
         text-align: left;
@@ -32,8 +37,6 @@
 
 @media only screen and (max-device-width: 440px) {
     .book-item {
-        display: flex;
-        flex-direction: column;
         padding: 0 10px;
         gap: 10px;
         transition: all 150ms ease-out;

@@ -7,6 +7,8 @@ const BookLocation = ({ title, author, cote, date, spot, dispatch }) => {
   return (
     <article className="bookloc-wrapper">
       <div className="bookloc-head-wrapper">
+        <p className="bookloc-head__title title">Emplacement</p>
+      </div>
         <button
           className="bookloc-head__btn-backtores"
           onClick={() =>
@@ -18,8 +20,6 @@ const BookLocation = ({ title, author, cote, date, spot, dispatch }) => {
           <i className="fa-solid fa-arrow-left bookloc-head__arrow"></i><span className="bookloc-head__text-res">
             Résultats</span>
         </button>
-        <p className="bookloc-head__title title">Emplacement</p>
-      </div>
         <img className="bookloc-spot__ovale-map" src={imgSRC} />
         <p>^</p>
         <p className="bookloc-spot__entry title">Entrée</p>
