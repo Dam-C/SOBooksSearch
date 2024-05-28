@@ -5,3 +5,4 @@ export { default as Pagination } from "./pagination.jsx";
 export { default as BookLocation } from "./bookLocation.jsx";
 export { default as ResultsList } from "./resultsList.jsx";
 export { default as ResultListItem } from "./resultsListItem.jsx";
+export { default as Loader } from "./loader.jsx";

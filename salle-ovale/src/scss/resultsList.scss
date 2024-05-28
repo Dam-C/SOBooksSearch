@@ -1,6 +1,7 @@
 .results{
   &-head{
     &-wrapper{
+      z-index: 300;
       position: sticky;
       top: 150px;
       padding-top:10px;
@@ -34,7 +35,6 @@
     }
   }
 }
-
 
 @media only screen and (max-device-width: 440px) {  
   .results{

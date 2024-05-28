@@ -11,11 +11,9 @@ const Pagination = ({ search, resPages, currPage, dispatch }) => {
   // Handling the query for the new page results
   async function handleNewPage(event) {
     event.preventDefault();
-    // console.log(event.target.value);
+
     const nextPageQuery = event.target.value;
-    axios
-    // .post("http://127.0.0.1:5000/resultsNewPage", {
-        .post("https://so-books-search-back.vercel.app/resultsNewPage", {
+    axios.post("https://so-books-search-back.vercel.app/resultsNewPage", {
         userSearch: search,
         nextPage: nextPageQuery,
       })
@@ -53,9 +51,9 @@ const Pagination = ({ search, resPages, currPage, dispatch }) => {
     }
   }
 
-  console.log(search);
-  console.log(resPages);
-  console.log(currPage);
+  // console.log(search);
+  // console.log(resPages);
+  // console.log(currPage);
 
   return (
     <article className="pagination-wrapper">

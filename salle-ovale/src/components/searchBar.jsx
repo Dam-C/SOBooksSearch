@@ -1,35 +1,43 @@
 import axios from "axios";
 import PropTypes from "prop-types";
+import { useState } from "react";
+import Loader from "./loader";
+// import { querySubmit } from "../utils/dbquery";
 
 const SearchBar = ({ search, dispatch, isSearched }) => {
+  
+  const [loader, setLoader] = useState(false);
+
   const handleQuerySubmit = async (event) => {
     event.preventDefault();
-    axios
-      // .post("http://127.0.0.1:5000/search", {
-      .post("https://so-books-search-back.vercel.app/search", {
+    
+    setLoader(true);
+
+    try{
+      const response = await axios.post("https://so-books-search-back.vercel.app/search", {
         userSearch: search,
       })
-      .then((response) => {
-        const content = response.data;
-        if (Object.prototype.hasOwnProperty.call(content, "noResult")) {
-          console.log(content.noResult);
-          dispatch({
-            type: "emptyResult",
-            currSearch: search,
-          });
-        } else {
-          dispatch({
-            type: "newSearch",
-            currSearch: search,
-            queryListResults: content.result,
-            totResults: content.totResults,
-            pages: Math.ceil(content.totResults / 20),
-          });
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      
+      const content = response.data;
+      if (content.hasOwnProperty("noResult")) {
+        dispatch({
+          type: "emptyResult",
+          currSearch: search,
+        });
+      } else {
+        dispatch({
+          type: "newSearch",
+          currSearch: search,
+          queryListResults: content.result,
+          totResults: content.totResults,
+          pages: Math.ceil(content.totResults / 20),
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoader(false);
+    };
   };
 
   return (
@@ -65,6 +73,7 @@ const SearchBar = ({ search, dispatch, isSearched }) => {
           </button>
         </div>
       </form>
+      {loader && <Loader/>}
     </article>
   );
 };
